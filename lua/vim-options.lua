@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set timeoutlen=400")
 vim.cmd("noswapfile")
+
 vim.g.mapleader = " "
 
 -- Navigate vim panes better
