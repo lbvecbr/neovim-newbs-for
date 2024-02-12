@@ -8,9 +8,7 @@ return {
 	},
 	config = function()
     require("neo-tree").setup({
-      window = {
-        width = 26,
-      },
+      window = { width = 26},
     })
 		vim.keymap.set("n", "<Leader>ee", ":Neotree toggle filesystem reveal float<CR>", {})
 		vim.keymap.set("n", "<Leader>e", ":Neotree toggle filesystem reveal left<CR>", {})
