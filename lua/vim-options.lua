@@ -9,23 +9,22 @@ vim.cmd("set noswapfile")
 vim.cmd("set number")
 vim.cmd("set conceallevel=2")
 
---For Markdown-Previw plugin
-vim.g.mkdp_browser = "/data/data/com.termux/files/usr/bin/firefox"
+--For Markdown-Previw plugin local path =
+if (os.getenv("HOME")) == "/data/data/com.termux/home/" then
+    vim.g.mkdp_browser = "/data/data/com.termux/files/usr/bin/firefox"
+else vim.g.mkdp_browser = ""
+end
 vim.g.mkdp_auto_close = 0
-vim.keymap.set('n', '<leader>mm', ':MarkdownPreviewToggle<CR>')
-
+vim.keymap.set("n", "<leader>mm", ":MarkdownPreviewToggle<CR>")
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
-vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set('v', 'jk', '<esc>')
-vim.keymap.set('n', 'ZZ', ':bd<CR>')
+vim.keymap.set("i", "jk", "<esc>")
+vim.keymap.set("v", "jk", "<esc>")
+vim.keymap.set("n", "ZZ", ":bd<CR>")
 
-vim.keymap.set('n', '<leader><space>', ':nohlsearch<CR>')
-
-
-
+vim.keymap.set("n", "<leader><space>", ":nohlsearch<CR>")
